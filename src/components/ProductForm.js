@@ -22,7 +22,7 @@ const ProductForm = ({products, onSubmit}) => {
     }
 
     return (
-        <form onSubmit={handleFormSubmit}>
+        <form className="product-form" onSubmit={handleFormSubmit}>
             <h3>Add a New Product</h3>
 
             <label htmlFor="product-name">Product Name:</label>
