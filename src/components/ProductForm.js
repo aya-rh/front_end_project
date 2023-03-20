@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ProductForm = ({onSubmit}) => {
+const ProductForm = ({products, onSubmit}) => {
     
     const [addedProduct, setAddedProduct] = useState({
         name: "",
@@ -34,7 +34,7 @@ const ProductForm = ({onSubmit}) => {
             <label htmlFor="product-description">Product Description:</label>
             <input id="product-description" name="description" type="text" placeholder="Enter product description" onChange={handleChange}/>
 
-            <label htmlFor="product-seller">Product Seller</label>
+            <label htmlFor="product-seller">Product Seller:</label>
             <input id="product-seller" name="seller" type="text" placeholder="Enter product seller" onChange={handleChange}/>
 
             <input type="submit" value="Add Product"/>
