@@ -2,10 +2,10 @@ import Product from "./Product";
 
 const ProductList = ({products, deleteProduct}) => {
     const productComponents = products.map(product => {
-        return <Product key={product.productId} product={product}/>
+        return <Product key={product.productId} product={product} deleteProduct={deleteProduct}/>
     })
     return(
-        <div className="product-list">{productComponents}</div>
+        <>{productComponents}</>
     )
 }
 

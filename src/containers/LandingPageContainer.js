@@ -61,7 +61,7 @@ const LandingPageContainer = () => {
     }
 
     const deleteProduct = async (id) => {
-        await fetch (`${SERVER_URL}/:${id}`, {
+        await fetch (`${SERVER_URL}/products/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json" 

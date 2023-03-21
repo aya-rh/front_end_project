@@ -1,4 +1,4 @@
-const Product = ({product}) => {
+const Product = ({product, deleteProduct}) => {
 
     return(
         <div className="product-card">
@@ -7,6 +7,7 @@ const Product = ({product}) => {
             <p><strong>Description: </strong>{product.description}</p>
             <p><strong>Seller: </strong>{product.sellerName}</p>
             <button>Add to cart</button>
+            <button onClick={()=> deleteProduct(product.productId)}>Delete</button>
         </div>
     )
 }
