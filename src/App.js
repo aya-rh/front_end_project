@@ -1,5 +1,6 @@
 import './App.css';
 import DealBanner from './components/DealBanner';
+import ExtraInfo from './components/ExtraInfo';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 import SubscribeForm from './components/SubscribeForm';
@@ -13,6 +14,7 @@ function App() {
       <DealBanner/>
       <LandingPageContainer/>
       <SubscribeForm/>
+      <ExtraInfo/>
     </div>
   );
 }
