@@ -10,15 +10,16 @@ const ProductForm = ({products, onSubmit}) => {
     });
 
     const handleChange = (event) => {
-        const productName = event.target.name;
+        const inputName = event.target.name;
         const copiedProduct = {...addedProduct};
-        copiedProduct[productName] = event.target.value;
+        copiedProduct[inputName] = event.target.value;
         setAddedProduct(copiedProduct);
     }
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
         onSubmit(addedProduct);
+        console.log(addedProduct);
     }
 
     return (

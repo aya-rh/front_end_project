@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import BestSellers from "../components/BestSellers";
 import ProductForm from "../components/ProductForm";
 import ProductList from "../components/ProductList";
+import NewProductsSlider from "../components/NewProductsSlider";
 
 const SERVER_URL = "http://localhost:8080";
 
@@ -9,6 +11,7 @@ const LandingPageContainer = () => {
     const [products, setProducts] = useState([]);
     const [pages, setPages] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const [sellers, setSellers] = useState([]);
 
     const loadProductData = async () => {
         const response = await fetch (`${SERVER_URL}/products`);
@@ -16,20 +19,44 @@ const LandingPageContainer = () => {
         setProducts(data);
     }
 
+    const loadSellerData  = async () => {
+        const response = await fetch (`${SERVER_URL}/sellers`);
+        const data = await response.json();
+        setSellers(data);
+    }
+
     useEffect(() => {
         loadProductData();
+        loadSellerData();
     }, []);
+
 
     
     const postProduct = async (addedProduct) => {
-        const response = await fetch (`${SERVER_URL}/products`, {
+
+        const productBody = {
+            name: addedProduct.name,
+            price: addedProduct.price,
+            description: addedProduct.description,
+            stock: 100,
+            listed: true
+        }
+
+        const id = sellers.filter((seller)=>{
+            return seller.name === addedProduct.seller
+        })[0].sellerId
+
+        const response = await fetch (`${SERVER_URL}/products?sellerId=${id}`, {
             method: "POST", 
             headers: {
                 "Content-Type" : "application/json"
             },
-            body: JSON.stringify(addedProduct)
+            body: JSON.stringify(productBody)
         })
         const savedProduct = await response.json();
+        savedProduct.sellerId = id;
+        savedProduct.sellerName = addedProduct.seller;
+        savedProduct.productId = savedProduct.id;
         setProducts([...products, savedProduct])
     }
 
@@ -49,9 +76,13 @@ const LandingPageContainer = () => {
             products={products}
             onSubmit={postProduct}/>
 
-            <ProductList 
+            <NewProductsSlider 
             products={products} 
-            onDelete={deleteProduct}/>
+            deleteProduct={deleteProduct}/>
+
+            <BestSellers 
+            products={products} 
+            deleteProduct={deleteProduct}/>
         </div>
     )
 }
