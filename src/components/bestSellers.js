@@ -2,7 +2,7 @@ import ProductList from "./ProductList";
 
 const BestSellers = ({products, deleteProduct}) => {
     return (
-        <div className="products-card">
+        <div className="products">
             <h2>BestSellers:</h2>
             <ProductList 
             key={"bestsellers"}

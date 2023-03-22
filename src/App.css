@@ -5,17 +5,18 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+  color: rgb(102, 102, 102);
 }
 
 /* links */
 a{
-  color: white;
+  color: rgb(102, 102, 102);
   margin: 1em;
   text-decoration: none;
 }
 
 a:hover{
-  color: darkgray;
+  color: rgb(204, 204, 204);
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s;
@@ -27,8 +28,8 @@ a:hover{
   justify-content: space-between;
   align-items: center;
   padding: 1px;
-  background-color: rgb(0, 0, 0);
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 .header-image {
@@ -57,42 +58,170 @@ input[type="search"]{
   align-items: center;
   width: 100%;
   padding: 1em;
-  background-color: rgb(41, 41, 41);
-  color: white;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
+  color: rgb(102, 102, 102);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 
 /* Deal Banner */
 .dealBanner{
   padding: 0.1px;
-  background-color:#b6e1e6;
+  background-color: rgb(224, 224, 224);
   text-align: center;
   font-size: 1.1em;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 
 /* bestsellers */
-.products-card{
+.products{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2em;
   padding: 2em;
   text-align: center;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
 }
 
-.bestsellers>button {
-  font-size: 20px;
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
-  border-color: #ffffff;
-  border-width: 2px;
+/* product card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  color: rgb(102, 102, 102);
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card>img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card>h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product-card>p {
+  margin-bottom: 20px;
+}
+
+.product-card>button {
+  font-size: 15px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(102, 102, 102);
+  border-color: rgb(102, 102, 102);
+  border-width: 1.5px;
   border-radius: 6px;
   transition-duration: 0.5s;
 }
-.productList>button:hover {
-  background-color: #ffffff;
+
+.product-card>button:hover {
+  background-color: #bfaccf;
   color: rgb(0, 0, 0);
 }
+
+/* subscribe form */
+.subscribe{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.subscribe-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+
+.subscribe-form>h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.subscribe-form input[type="text"]{
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.subscribe-form input[type="submit"] {
+  background-color: #d3d3d3;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* timer */
+.subscribe-timer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+
+.subscribe-timer>h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.subscribe-timer #timer {
+  font-size: 30px;
+  font-weight: bold;
+  color: #bfaccf;
+}
+
+/* subscribed users for subscribers page */
+.subscribed-users {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.subscribed-users h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* to have subscribe form and timer to be responsive */
+@media screen and (max-width: 768px) {
+  .subscribe-form,
+  .subscribe-timer {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.subscribed-users ul {
+  /* for no bullet points */
+  list-style: none;
+}
+
 
