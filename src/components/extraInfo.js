@@ -34,8 +34,6 @@ const ExtraInfo = () => {
                 <a href="#Delivery Rates & Policies">Delivery Rates & Policies</a>
                 <a href="#Returns & Replacements">Returns & Replacements</a>
                 <a href="#Recycling">Recycling</a>
-                <a href="#Manage Devices">Manage Devices</a>
-                <a href="#Mobile App">Mobile App</a>
                 <a href="#Customer Services">Customer Services</a>
             </div>
         </div>

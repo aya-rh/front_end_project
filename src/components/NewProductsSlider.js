@@ -1,4 +1,3 @@
-import ProductList from "./ProductList";
 import Product from "./Product";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -40,10 +39,11 @@ const NewProductsSlider = ({ products, deleteProduct }) => {
 
   //configures the behaviour of the slider
   const settings = {
+    className: "react__slick__slider__parent",
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
   };
 
@@ -51,7 +51,7 @@ const NewProductsSlider = ({ products, deleteProduct }) => {
     <div className="new-products">
       <h2>New Products:</h2>
       <Slider {...settings}>
-        {/* was wrapping extra div around product list and breaking it */}
+        {/* was wrapping extra div around each product in list and breaking it */}
         {/* <ProductList
           products={newProducts}
           deleteProduct={deleteProduct}
