@@ -1,7 +1,7 @@
 const DealBanner = () => {
     return (
         <div className="dealBanner">
-            <p>LAST CHANCE... up to 60% off</p>
+            <p><strong>LAST CHANCE... up to 60% off</strong></p>
         </div>
     )
 }

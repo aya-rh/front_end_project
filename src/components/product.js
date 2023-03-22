@@ -6,8 +6,8 @@ const Product = ({product, deleteProduct}) => {
             <p><strong>Price: £</strong>{product.price}</p>
             <p><strong>Description: </strong>{product.description}</p>
             <p><strong>Seller: </strong>{product.sellerName}</p>
-            <button>Add to cart</button>
-            <button onClick={()=> deleteProduct(product.productId)}>Delete</button>
+            <button className="add">Add to cart</button>
+            <button className="delete" onClick={()=> deleteProduct(product.productId)}>Delete</button>
         </div>
     )
 }
