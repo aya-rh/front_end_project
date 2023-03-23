@@ -49,7 +49,8 @@ const NewProductsSlider = ({ products, deleteProduct }) => {
 
   return (
     <div className="new-products">
-      <h2>New Products:</h2>
+      <h2>New Arrivals</h2>
+      <p>Upgrade your lifestyle with our new arrivals!</p>
       <Slider {...settings}>
         {/* was wrapping extra div around each product in list and breaking it */}
         {/* <ProductList
