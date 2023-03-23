@@ -3,6 +3,11 @@ import { Route, Routes } from "react-router-dom"
 
 
 const ElectronicsPage= () => {
+    return(
+        <div>
+            <h1>Electronics Items</h1>
+        </div>
+    )
 }
 
 export default ElectronicsPage;

@@ -7,6 +7,7 @@ import SubscribersPage from './pages/SubscriberPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { useState, useEffect } from 'react';
+import ElectronicsPage from './pages/ElectronicsPage';
 
 function App() {
   const SERVER_URL = "http://localhost:8080";
@@ -83,7 +84,7 @@ function App() {
       <Route path="/Login" element={<Navigate to="/Home" />} />
       <Route path="/Cart" element={<Navigate to="/Home" />} />
       <Route path="/" element={<Navigate to="/Home" />} />
-      <Route path="/Home/Electronics" element={<Navigate to="/Home" />} />
+      <Route path="/Electronics" element={<ElectronicsPage/>} />
       </Routes>
       <Footer/>
     </div>
