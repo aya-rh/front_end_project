@@ -76,7 +76,7 @@ function App() {
     <div className="App">
       <Header/>
       <Routes>
-      <Route path="/Home" element={<Homepage products={products} postProduct={postProduct}/>} />
+      <Route path="/Home" element={<Homepage products={products} postProduct={postProduct} deleteProduct={deleteProduct}/>} />
       <Route path="/Contact" element={<ContactPage />} />
       <Route path="/Sellers" element={<SellerPage postProduct={postProduct}/>} />
       <Route path="/Subscribers" element={<SubscribersPage />} />

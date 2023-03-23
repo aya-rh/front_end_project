@@ -8,12 +8,12 @@
 
  
 
- const Homepage = ({products, postProduct}) => {
+ const Homepage = ({products, postProduct, deleteProduct}) => {
     return (
         <>
             <NavBar/>
             <DealBanner/>
-            <LandingPageContainer products={products} postProduct={postProduct}/>
+            <LandingPageContainer products={products} postProduct={postProduct} deleteProduct={deleteProduct}/>
             <SubscribeForm/>
             <ExtraInfo/>
         </>
