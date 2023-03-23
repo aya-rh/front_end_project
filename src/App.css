@@ -198,7 +198,7 @@ input[type="search"] {
 }
 .new-products>p{
   text-align: left;
-  font-size: 12px;
+  font-size: 0.8em;
   padding-bottom: 10px;
 }
 .react__slick__slider__parent {
@@ -235,10 +235,15 @@ input[type="search"] {
   padding: 2em;
   text-align: center;
 }
-/* .products>h2{
-  padding: 10px;
-  text-align: left;
-} */
+.products-div>h2{
+  padding-top: 20px;
+  text-align: center;
+}
+.products-div>p{
+  text-align: center;
+  font-size: 0.8em;
+  padding-bottom: 10px;
+}
 
 
 
