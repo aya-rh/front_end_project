@@ -1,18 +1,12 @@
-import { useEffect, useState } from "react";
 import BestSellers from "../components/BestSellers";
-import ProductForm from "../components/ProductForm";
-import ProductList from "../components/ProductList";
 import NewProductsSlider from "../components/NewProductsSlider";
 
 const SERVER_URL = "http://localhost:8080";
 
 const LandingPageContainer = ({products, deleteProduct}) => {
 
-
-
     return (
         <div>
-
             <NewProductsSlider 
             products={products} 
             deleteProduct={deleteProduct}/>

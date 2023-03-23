@@ -6,9 +6,13 @@ const SubscribeForm = () => {
 
     const handleEmailSubmit = (event) => {
         event.preventDefault();
-        setSubscribedUsers([...subscribedUsers, email]);
-        alert(`You have subscribed with ${email}`);
-        setEmail("");
+        if(email.includes("@")){
+            alert(`You have subscribed with ${email}`);
+            setSubscribedUsers([...subscribedUsers, email]);
+            setEmail("");
+        } else {
+            alert(`Please enter a valid email address`);
+        }
     }
 
     // Set the date we are counting down to:
