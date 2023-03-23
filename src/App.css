@@ -153,10 +153,12 @@ input[type="search"] {
   transform: translateY(-4px);
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
 }
-.product-card>img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+.product-card #image {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-height: 250px;
+  margin-bottom: 30px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -179,6 +181,7 @@ input[type="search"] {
   width: 100px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 8px;
 }
 .product-card>button:hover {
   background-color: #bfaccf;
