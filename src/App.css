@@ -2,11 +2,14 @@
   text-align: center;
   background-color: rgb(255, 255, 255);
 }
-
 body{
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(102, 102, 102);
 }
+
+
+
+
 
 /* links */
 a{
@@ -15,13 +18,16 @@ a{
   text-decoration: none;
   display: inline-block;
 }
-
 a:hover{
   color: rgb(204, 204, 204);
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s;
 }
+
+
+
+
 
 /* Header */
 .header {
@@ -32,11 +38,9 @@ a:hover{
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
-
 .header-image {
   justify-content: left;
 }
-
 #nav-container{
   flex-wrap: nowrap;
 }
@@ -54,6 +58,10 @@ input[type="search"] {
   box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
 }
 
+
+
+
+
 /* Nav Bar */
 .navBar{
   display: flex;
@@ -68,6 +76,49 @@ input[type="search"] {
 }
 
 
+
+
+
+/* product form */
+.product-form {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.product-form>h3 {
+  font-size: 24px;
+  text-align: left;
+}
+.product-form>label {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.product-form>input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+.product-form input[type="submit"] {
+  color: white;
+  background-color: rgb(144, 144, 144);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: rgb(102, 102, 102) 0.3s ease-in-out;
+}
+.product-form input[type="submit"]:hover {
+  background-color: rgb(102, 102, 102);
+}
+
+
+
+
+
 /* deal Banner */
 .dealBanner{
   padding: 0.1px;
@@ -76,30 +127,13 @@ input[type="search"] {
   font-size: 1.1em;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
-
-.react__slick__slider__parent {
-  position: relative;
+.dealBanner>p:hover {
+  color: #bfaccf;
 }
 
-.react__slick__slider__parent .slick-prev,
-.react__slick__slider__parent .slick-next {
-  position: absolute;
-  top: 50%;
-}
-.react__slick__slider__parent .slick-prev {
-  left: 1% !important;
-  color: black;
-  z-index: 1 !important;
-}
-.react__slick__slider__parent .slick-next {
-  right: 1% !important;
-  color: black;
-  z-index: 1 !important;
-}
 
-.react__slick__slider__parent .slick-prev:before, .slick-next:before {
-  color: black;
-}
+
+
 
 /* product card */
 .product-card {
@@ -113,13 +147,11 @@ input[type="search"] {
   padding: 20px;
   transition: all 0.3s ease;
 }
-
 .product-card:hover {
   /* moves card up slightly on hover */
   transform: translateY(-4px);
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
 }
-
 .product-card>img {
   max-width: 100%;
   height: auto;
@@ -127,16 +159,13 @@ input[type="search"] {
   object-fit: cover;
   border-radius: 8px;
 }
-
 .product-card>h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 .product-card>p {
   margin-bottom: 20px;
 }
-
 .product-card>button {
   font-size: 15px;
   background-color: rgb(255, 255, 255);
@@ -145,12 +174,16 @@ input[type="search"] {
   border-width: 1.5px;
   border-radius: 6px;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
-
 .product-card>button:hover {
   background-color: #bfaccf;
   color: rgb(0, 0, 0);
 }
+
+
+
+
 
 /* slider */
 .new-products{
@@ -159,6 +192,39 @@ input[type="search"] {
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.15)
 }
+.new-products>h2{
+  text-align: left;
+}
+.new-products>p{
+  text-align: left;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.react__slick__slider__parent {
+  position: relative;
+}
+
+.react__slick__slider__parent .slick-prev,
+.react__slick__slider__parent .slick-next {
+  position: absolute;
+  top: 50%;
+}
+.react__slick__slider__parent .slick-prev {
+  left: 1% !important;
+  z-index: 1 !important;
+}
+.react__slick__slider__parent .slick-next {
+  right: 1% !important;
+  z-index: 1 !important;
+}
+
+.react__slick__slider__parent .slick-prev:before, .slick-next:before {
+  color: rgb(57, 57, 57) !important;
+}
+
+
+
+
 
 /* bestsellers */
 .products{
@@ -168,6 +234,14 @@ input[type="search"] {
   padding: 2em;
   text-align: center;
 }
+/* .products>h2{
+  padding: 10px;
+  text-align: left;
+} */
+
+
+
+
 
 /* subscribe form */
 .subscribe{
@@ -178,7 +252,6 @@ input[type="search"] {
   background-color: white;
   padding: 20px;
 }
-
 .subscribe-form{
   display: flex;
   flex-direction: column;
@@ -189,12 +262,10 @@ input[type="search"] {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin-right: 20px;
 }
-
 .subscribe-form>h2{
   font-size: 20px;
   margin-bottom: 10px;
 }
-
 .subscribe-form input[type="text"]{
   padding: 10px;
   font-size: 16px;
@@ -203,15 +274,25 @@ input[type="search"] {
   margin-bottom: 20px;
   width: 100%;
 }
-
 .subscribe-form input[type="submit"] {
-  background-color: #d3d3d3;
-  color: white;
+  color: rgb(102, 102, 102);
+  background-color: white;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 10px;
   cursor: pointer;
 }
+.subscribe-form input[type="submit"]:hover {
+  background-color: #bfaccf;
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+
+
+
 
 /* timer */
 .subscribe-timer{
@@ -223,33 +304,37 @@ input[type="search"] {
   padding: 20px;
   text-align: center;
 }
-
 .subscribe-timer>h3{
   font-size: 20px;
   margin-bottom: 10px;
 }
-
 .subscribe-timer #timer {
   font-size: 30px;
   font-weight: bold;
   color: #bfaccf;
 }
 
+
+
+
+
 /* subscribed users for subscribers page */
 .subscribed-users {
   width: 100%;
   margin-top: 20px;
 }
-
 .subscribed-users h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
-
 .subscribed-users ul {
   /* for no bullet points */
   list-style: none;
 }
+
+
+
+
 
 /* extra information section */
 .extraInfo {
@@ -257,12 +342,15 @@ input[type="search"] {
   justify-content: space-between;
   padding: 10px;
 }
-
 .extraInfo>div {
   display: flex;
   flex-direction: column;
   margin: 20px;
 }
+
+
+
+
 
 /* footer */
 .footer {
@@ -290,7 +378,6 @@ input[type="search"] {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .socials>a{
   display: inline-flex;
   margin: 0 10px;
@@ -304,7 +391,6 @@ input[type="search"] {
   /* creates the circle that will be white on hover */
   border-radius: 50%;
 }
-
 .socials>a:hover{
   background-color: rgb(190, 190, 190);
   color: #bfaccf;
@@ -315,7 +401,6 @@ input[type="search"] {
   flex-basis: 100%;
   margin-bottom: 20px;
 }
-
 .payment>p {
   margin: 0;
   color:rgb(102, 102, 102);
@@ -327,6 +412,7 @@ input[type="search"] {
   text-align: center;
   padding-top: 20px;
 }
+
 
 
 
