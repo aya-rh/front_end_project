@@ -11,33 +11,33 @@ const SubscribeForm = () => {
         setEmail("");
     }
 
-    // Set the date we are counting down to:
-    const countDownDate = new Date("March 24, 2023, 15:00:00").getTime();
+    // // Set the date we are counting down to:
+    // const countDownDate = new Date("March 24, 2023, 15:00:00").getTime();
 
-    // Update the count down every 1 second 
+    // // Update the count down every 1 second 
 
-    const countDown = setInterval(function() { 
-        // Get today's date and time
-        const now = new Date().getTime();
+    // const countDown = setInterval(function() { 
+    //     // Get today's date and time
+    //     const now = new Date().getTime();
 
-        // Find the distance between now and countdown date
-        const distance = countDownDate - now;
+    //     // Find the distance between now and countdown date
+    //     const distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //     // Time calculations for days, hours, minutes and seconds
+    //     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result in the element with id="timer"
-        document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    //     // Display the result in the element with id="timer"
+    //     document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-        // If the count down is finished, display expired
-        if (distance < 0) {
-            clearInterval(countDown);
-            document.getElementById("timer").innerHTML = "EXPIRED";
-          }
-        }, 1000);
+    //     // If the count down is finished, display expired
+    //     if (distance < 0) {
+    //         clearInterval(countDown);
+    //         document.getElementById("timer").innerHTML = "EXPIRED";
+    //       }
+    //     }, 1000);
 
 
 

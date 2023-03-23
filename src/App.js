@@ -1,23 +1,25 @@
 import './App.css';
-import DealBanner from './components/DealBanner';
-import ExtraInfo from './components/ExtraInfo';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import NavBar from './components/NavBar';
-import SubscribeForm from './components/SubscribeForm';
-import LandingPageContainer from './containers/LandingPageContainer';
+import { BrowserRouter ,Routes, Route, Link, Navigate } from 'react-router-dom';
+import Homepage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import SellerPage from './pages/SellerPage';
+import SubscribersPage from './pages/SubscribersPage';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <Header/>
-      <NavBar/>
-      <DealBanner/>
-      <LandingPageContainer/>
-      <SubscribeForm/>
-      <ExtraInfo/>
-      <Footer/>
+      <Routes>
+      <Route path="/Home" element={<Homepage />} />
+      <Route path="/Contact" element={<ContactPage/>} />
+      <Route path="/Sellers" element={<SellerPage />} />
+      <Route path="/Subscribers" element={<SubscribersPage />} />
+      <Route path="/Login" element={<Navigate to="/Home" />} />
+      <Route path="/Cart" element={<Navigate to="/Home" />} />
+      <Route path="/" element={<Navigate to="/Home" />} />
+      </Routes>
     </div>
+    </BrowserRouter>
   );
 }
 
