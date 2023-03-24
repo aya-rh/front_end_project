@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 import ElectronicsPage from "./pages/ElectronicsPage";
 import LandingPageContainer from "./containers/LandingPageContainer";
+import CartPage from "./pages/CartPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   const SERVER_URL = "http://localhost:8080";
@@ -112,9 +114,10 @@ function App() {
             element={<SellerPage postProduct={postProduct} />}
           />
           <Route path="/Subscribers" element={<SubscribersPage />} />
-          <Route path="/Login" element={<Navigate to="/Home" />} />
-          <Route path="/Cart" element={<Navigate to="/Home" />} />
+          <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Cart" element={<CartPage />} />
           <Route path="/Electronics" element={<ElectronicsPage />} />
+          <Route path="/Gadgets" element={<Navigate to="/Home" />} />
         </Routes>
         <Footer />
       </div>
