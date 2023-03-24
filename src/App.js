@@ -8,14 +8,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
 import ElectronicsPage from "./pages/ElectronicsPage";
+import LandingPageContainer from "./containers/LandingPageContainer";
 
 function App() {
   const SERVER_URL = "http://localhost:8080";
 
   const [products, setProducts] = useState([]);
-  const [pages, setPages] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
   const [sellers, setSellers] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const loadProductData = async () => {
     const response = await fetch(`${SERVER_URL}/products`);
@@ -75,7 +75,19 @@ function App() {
     loadProductData();
   };
 
-  
+
+  // add to cart
+  const addToCart = (product) => {
+    const item = {
+      id: product.productId,
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+    };
+    setCart([...cart, item]);
+  };
+
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -88,10 +100,13 @@ function App() {
                 products={products}
                 postProduct={postProduct}
                 deleteProduct={deleteProduct}
+                addToCart={addToCart}
+                cart={cart}
               />
             }
           />
           <Route path="/Contact" element={<ContactPage />} />
+          <Route path="/" element={<LandingPageContainer products={products} deleteProduct={deleteProduct} addToCart={addToCart} />} />
           <Route
             path="/Sellers"
             element={<SellerPage postProduct={postProduct} />}
@@ -99,7 +114,6 @@ function App() {
           <Route path="/Subscribers" element={<SubscribersPage />} />
           <Route path="/Login" element={<Navigate to="/Home" />} />
           <Route path="/Cart" element={<Navigate to="/Home" />} />
-          <Route path="/" element={<Navigate to="/Home" />} />
           <Route path="/Electronics" element={<ElectronicsPage />} />
         </Routes>
         <Footer />

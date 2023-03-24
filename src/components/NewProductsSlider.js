@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const NewProductsSlider = ({ products, deleteProduct }) => {
+const NewProductsSlider = ({ products, deleteProduct, addToCart}) => {
   
     const newProducts = getRandomSubarray(products, 5);
 
@@ -58,7 +58,7 @@ const NewProductsSlider = ({ products, deleteProduct }) => {
           deleteProduct={deleteProduct}
         /> */}
         {newProducts.map(product => {
-        return <Product key={product.productId} product={product}/>
+        return <Product key={product.productId} product={product} deleteProduct={deleteProduct} addToCart={addToCart}/>
     })}
       </Slider>
     </div>

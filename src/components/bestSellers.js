@@ -1,6 +1,6 @@
 import ProductList from "./ProductList";
 
-const BestSellers = ({ products, deleteProduct }) => {
+const BestSellers = ({ products, deleteProduct, addToCart}) => {
   return (
     <div className="products-div">
       <h2>Our Bestsellers</h2>
@@ -10,6 +10,7 @@ const BestSellers = ({ products, deleteProduct }) => {
           key={"bestsellers"}
           products={products}
           deleteProduct={deleteProduct}
+          addToCart={addToCart}
         />
       </div>
     </div>

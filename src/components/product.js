@@ -1,9 +1,13 @@
-const Product = ({product, deleteProduct}) => {
+const Product = ({product, deleteProduct, addToCart}) => {
     function importAll(r) {
         let images = {};
         r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
         return images;
       }
+
+      const handleAddToCart = () => {
+        addToCart(product);
+      };
       
       const pics = importAll(require.context('../pics', false, /\.(png|jpeg|svg)$/));
     return(
@@ -13,7 +17,7 @@ const Product = ({product, deleteProduct}) => {
             <p><strong>Price: £</strong>{product.price}</p>
             <p>{product.description}</p>
             <p><strong>Seller: </strong>{product.sellerName}</p>
-            <button className="add">Add to cart</button>
+            <button className="add" onClick={handleAddToCart}>Add to cart</button>
             <button className="delete" onClick={()=> deleteProduct(product.productId)}>Delete</button>
         </div>
     )

@@ -6,12 +6,12 @@
 
  
 
- const Homepage = ({products, postProduct, deleteProduct}) => {
+ const Homepage = ({products, postProduct, deleteProduct, addToCart}) => {
     return (
         <>
             <NavBar/>
             <DealBanner/>
-            <LandingPageContainer products={products} postProduct={postProduct} deleteProduct={deleteProduct}/>
+            <LandingPageContainer products={products} postProduct={postProduct} deleteProduct={deleteProduct} addToCart={addToCart}/>
             <SubscribeForm/>
             <ExtraInfo/>
         </>
