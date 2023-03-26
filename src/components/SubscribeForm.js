@@ -16,7 +16,7 @@ const SubscribeForm = () => {
     }
 
     // Set the date we are counting down to:
-    const countDownDate = new Date("March 24, 2023, 17:00:00").getTime();
+    const countDownDate = new Date("March 24, 2023, 10:31:00").getTime();
 
     // // Update the count down every 1 second 
 
